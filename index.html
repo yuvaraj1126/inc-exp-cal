@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Expense Cal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Income Expense Calculator</h1>
+        <div class="balance-summary">
+            <p><span class="label">Total Income:</span> <span class="amount" id="total-income">₹0.00</span></p>
+            <p><span class="label">Total Expenses:</span> <span class="amount" id="total-expense">₹0.00</span></p>
+            <p><span class="label">Net Balance:</span> <span class="amount" id="net-balance">₹0.00</span></p>
+        </div>
+        <form id="transaction-form">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <button type="submit">Add Entry</button>
+            <button type="button" id="reset-btn">Reset</button>
+        </form>
+        <div class="filters">
+            <label><input type="radio" name="filter" value="all" checked> All</label>
+            <label><input type="radio" name="filter" value="income"> Income</label>
+            <label><input type="radio" name="filter" value="expense"> Expense</label>
+        </div>
+        <ul id="transaction-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
